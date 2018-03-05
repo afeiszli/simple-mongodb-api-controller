@@ -194,7 +194,8 @@
           }
         }
       }
-    },
+    }
+   ],
 "parameters": [
     {
       "name": "NAME",
