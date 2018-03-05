@@ -86,7 +86,7 @@
           "contextDir": "${CONTEXT_DIR}"
         },
         "strategy": {
-          "type": "Source",
+          "type": "Docker",
           "sourceStrategy": {
             "from": {
               "kind": "ImageStreamTag",
