@@ -15,7 +15,7 @@ try {
             if (branch.contains('/')){
                 branch = branch.substring(branch.lastIndexOf("/") + 1)
             }
-            sh """oc process -f nodejs.json -p NAME=$branch -p SOURCE_REPOSITORY_URL=https://github.com/afeiszli/simple-mongodb-api-controller.git -p SOURCE_REPOSITORY_REF=$source -lapp=$branch | oc apply -f -"""
+            sh """oc process -f simple-mongodb-api-controller.json -p NAME=$branch -p SOURCE_REPOSITORY_URL=https://github.com/afeiszli/simple-mongodb-api-controller.git -p SOURCE_REPOSITORY_REF=$source -lapp=$branch | oc apply -f -"""
             sh """oc start-build $branch"""
             
         }
