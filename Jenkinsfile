@@ -11,7 +11,7 @@ node {
            	}                  
 
 
-                  sh “””oc process -f simple-mongodb-api-controller.json -p NAME=$branch -lapp=$branch | oc apply -f -”””
+                  sh """oc process -f simple-mongodb-api-controller.json -p NAME=$branch -lapp=$branch | oc apply -f -"""
 		  sh """oc start build $branch"""
                   //’oc apply’ will create the objects or configure them if already created
                   //start-build will start the build and unit tests in openshift. 
