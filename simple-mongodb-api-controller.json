@@ -86,14 +86,13 @@
           "contextDir": "${CONTEXT_DIR}"
         },
         "strategy": {
-          "type": "Custom",
-          "customStrategy": {
+          "type": "Source",
+          "sourceStrategy": {
             "from": {
-              "kind": "DockerImage",
-              "namespace": "${NAMESPACE}",
-              "name": "codecentric/springboot-maven3-centos:latest"
+              "kind": "ImageStreamTag",
+              "namespace": "codecentric",
+              "name": "springboot-maven3-centos:latest"
             },
-	  "exposeDockerSocket": true,
             "env":  [
             ]
           }
