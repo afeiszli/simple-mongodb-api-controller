@@ -43,6 +43,21 @@
       }
     },
    {
+      "kind": "ImageStream",
+      "apiVersion": "v1",
+      "metadata":{
+         "name": "springboot-maven3-centos"
+      }
+      "spec": {
+         "tags": {
+         }
+      }
+      "from": {
+ 	 "kind": "DockerImage",
+         "name": "codecentric/springboot-maven3-centos:latest"
+      }
+   },
+   {
       "kind": "Route",
       "apiVersion": "v1",
       "metadata": {
@@ -89,9 +104,8 @@
           "type": "Source",
           "sourceStrategy": {
             "from": {
-              "kind": "ImageStreamTag",
-              "namespace": "codecentric",
-              "name": "springboot-maven3-centos:latest"
+              "kind": "ImageStream",
+              "name": "springboot-maven3-centos"
             },
             "env":  [
             ]
