@@ -210,7 +210,7 @@
     {
       "name": "MONGODB_PORT",
       "displayName": "Mongo Database Port",
-      "value": 27017
+      "value": "27017"
     },
     {
       "name": "MONGODB_PASS",
