@@ -53,6 +53,7 @@
       },
       "spec": {
          "tags": {
+	    "name": "latest"
          }
       },
       "from": {
