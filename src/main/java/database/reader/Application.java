@@ -3,6 +3,7 @@ package database.reader;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +19,10 @@ public class Application {
 	@Autowired
 	CustomerRepository repository;
 
+	@Value("${testval}")
+	String testMe;
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
@@ -38,6 +43,11 @@ public class Application {
     @RequestMapping(value = "/get_all_customers", method = RequestMethod.GET)
     public List<Customer> getAll() {
     	return repository.findAll();
+    }
+    
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test() {
+    	return testMe;
     }
     
 }
