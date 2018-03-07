@@ -49,8 +49,8 @@
          "name": "springboot-maven3-centos",
 	 "annotations": {
 	    "openshift.io/display-name": "springboot-maven3-centos"
-	},
-      }
+	}
+      },
       "spec": {
          "tags": {
          }
