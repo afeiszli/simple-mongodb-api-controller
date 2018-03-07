@@ -46,19 +46,16 @@
       "kind": "ImageStream",
       "apiVersion": "v1",
       "metadata":{
-         "name": "springboot-maven3-centos",
-	 "annotations": {
-	    "openshift.io/display-name": "springboot-maven3-centos"
-	}
+         "name": "springboot-maven3-centos"
       },
       "spec": {
          "tags": {
-	    "name": "latest"
-         }
-      },
-      "from": {
- 	 "kind": "DockerImage",
-         "name": "codecentric/springboot-maven3-centos:latest"
+	    "name": "latest",	
+      	    "from": {
+ 	       "kind": "DockerImage",
+               "name": "codecentric/springboot-maven3-centos:latest"
+	    }
+	 }
       }
    },
    {
